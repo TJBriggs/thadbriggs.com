@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    ::Base
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+html, body,
+.wrap-all-the-things {
+	height: 100%;
+}
+.wrap-all-the-things {
+	position: relative;
+}
+html {
+	background-color: #000;
+	color: $color-5;
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+body {
+	margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}

@@ -1,0 +1,189 @@
+/*------------------------------------*\
+    :: Contact Page
+\*------------------------------------*/
+.section--contact {
+	// Hide bottom white border for last slide
+	&:after {
+		display: none;
+	}
+	.section__content-wrap {
+		background-color: rgba(255, 255, 255, 0.8);
+		display: inline-block;
+		max-width: 735px;
+		padding: 4.25em 3.25em;
+		width: 100%;
+		@include bp($max:1200px) {
+			font-size: 1.35vw;
+			width: 80vw;
+		}
+		@include bp($max:850px) {
+			font-size: 2.15vw;
+			padding: 2.25em;
+		}
+		@include bp($max:640px) {
+			background-color: transparent;
+			font-size: 2.4vw;
+			padding: 0;
+			width: 90%;
+		}
+		@include bp($max:500px) {
+			font-size: 3.25vw;
+		}
+		@include bp($max:400px) {
+			font-size: 4.25vw;
+		}
+		h3 {
+			font-size: 1.8em;
+			margin: 0 0 0.5em;
+			@include bp($max:640px) {
+				color: $color-4;
+				text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+			}
+		}
+		p, a {
+			font-size: 0.95em;
+			margin-bottom: em(15px);
+			padding: 0 2em;
+			@include bp($max:1050px) {
+				font-size: 1.1em;
+			}
+			@include bp($max:850px) {
+				font-size: 0.95em;
+			}
+			@include bp($max:640px) {
+				color: $color-4;
+				text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+			}
+			@include bp($max:500px) {
+				padding: 0;
+			}
+		}
+		.section__link-wrap {
+			text-align: center;
+			width: 100%;
+			a {
+				color: $color-5;
+				display: inline-block;
+				padding: 0;
+				position: relative;
+				text-decoration: none;
+				width: 180px;
+				@include bp($max:640px) {
+					color: $color-4;
+				}
+				&:after {
+					background: $color-5;
+					bottom: -3px;
+					content: '';
+					height: 1px;
+					left: 0;
+					position: absolute;
+					right: 0;
+					transition: left 400ms, right 400ms, background 100ms ease-in-out;
+					@include bp($max:640px) {
+						background: $color-1;
+					}
+				}
+				&:hover {
+					text-decoration: none;
+					&:after {
+						background: darken($color-1, 10%);
+						left: 50%;
+						right: 50%;
+					}
+				}
+			}
+			span {
+				display: inline-block;
+				width: 7px;
+				@include bp($max:415px) {
+					display: none;
+				}
+			}
+		}
+		.section__social-wrap {
+			list-style-type: none;
+			margin: em(30px) 0 0 0;
+			padding: 0;
+			text-align: center;
+			@include bp($max:400px) {
+				margin: em(20px) 0 0 0;
+			}
+			li {
+				display: inline-block;
+				line-height: 1em;
+				margin: 0 20px;
+				@include bp($max:450px) {
+					margin: 0 em(10px);
+				}
+			}
+			a {
+				align-items: center;
+				display: inline-flex;
+				margin: 0;
+				padding: 0;
+			}
+			svg {
+				fill: $color-5;
+				height: 40px;
+				transition: fill 400ms;
+				width: 40px;
+				@include bp($max:640px) {
+					fill: $color-4;
+				}
+				@include bp($max:450px) {
+					height: 30px;
+					width: 30px;
+				}
+				&:hover {
+					fill: darken($color-1, 25%);
+					@include bp($max:640px) {
+						fill: $color-1;
+					}
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    :: Mobile Landscape
+\*------------------------------------*/
+.touch {
+	@media only screen 
+		and (max-device-width: 1023px)
+		and (orientation : landscape) {
+		.section--contact {
+			.section__content-wrap {
+				background-color: transparent;
+				font-size: 2vw;
+				padding: 0;
+				width: 90%;
+				h3 {
+					color: $color-4;
+					font-size: 1.8em;
+					margin: 0 0 0.5em;
+					text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+				}
+				p, a {
+					color: $color-4;
+					text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+				}
+				.section__link-wrap {
+					a {
+						color: $color-4;
+						width: 185px;
+						&:after {
+							background: $color-1;
+						}
+					}
+				}
+				.section__social-wrap {
+					margin-top: 1em;
+					svg {
+						fill: $color-4;
+					}
+				}
+			}
+		}
+	}	
+}

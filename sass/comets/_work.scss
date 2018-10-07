@@ -1,0 +1,441 @@
+/*------------------------------------*\
+	:: Work Page
+\*------------------------------------*/
+.section--work {
+	height: 100vh;
+	width: 100vw;
+	&:before {
+		background-color: $color-4;
+		content: "";
+		height: 1px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 9999;
+	}	
+	&:after {
+		background-color: $color-4;
+		bottom: 0;
+		content: '';
+		height: 1px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		width: 100%;
+		z-index: 9999;
+	}
+	// Slider Arrows
+	.fp-controlArrow.fp-prev {
+		background: url(../images/global/arrow-left.svg) no-repeat;
+		border: none;
+		display: inline-block;
+		height: 50px;
+		left: $pad;
+		opacity: 1;
+		transition: opacity 400ms;
+		width: 25px;
+		&:hover {
+			opacity: 0.6;
+		}
+		@include bp($max:768px) {
+			height: 45px;
+			left: $pad;
+			width: 20px;
+		}
+		@include bp($max:640px) {
+			bottom: $pad*1.5;
+			height: 40px;
+			top: auto;
+			width: 17px;
+		}
+	}
+	.fp-controlArrow.fp-next {
+		background: url(../images/global/arrow-right.svg) no-repeat;
+		border: none;
+		display: inline-block;
+		height: 50px;
+		opacity: 1;
+		right: $pad;
+		transition: opacity 400ms;
+		width: 25px;
+		&:hover {
+			opacity: 0.6;
+		}
+		@include bp($max:768px) {
+			height: 45px;
+			right: $pad;
+			width: 20px;
+		}
+		@include bp($max:640px) {
+			bottom: $pad*1.5;
+			height: 40px;
+			top: auto;
+			width: 17px;
+		}
+	}
+	.section__content-wrap {
+		height: 100vh;
+		width: 100vw;
+	}
+	.slide {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+		position: relative;
+		text-align: center;
+		width: 100vw;
+		z-index: 1;
+		.slide__content {
+			background-color: rgba(255, 255, 255, 0.8);
+			display: inline-block;
+			margin: 0 auto;
+			max-width: 735px;
+			padding: 2em 2em;
+			width: 100%;
+			@include bp($max:1200px) {
+				width: 80vw;
+			}
+			@include bp($max:640px) {
+				background-color: transparent;
+				padding: 0;
+				width: 90%;
+			}
+			@include bp($max:550px) {
+				max-width: 400px;
+			}
+			.slide__image {
+				box-shadow: 0 0 10px 0px rgba(0,0,0, 0.20);
+			}
+			.slide__col-wrap {
+				display: flex;
+				flex-wrap: wrap;
+				padding-top: 1.25em;
+				@include bp($max:550px) {
+					padding-top: 1em;
+				}
+			}
+			.slide__column {
+				text-align: left;
+				&:first-of-type {
+					padding-right: 1.25em;
+					width: 60%;
+					@include bp($max:640px) {
+						padding-right: 0;
+						width: 100%;
+					}
+				}
+				&:last-of-type {
+					padding-left: 1.25em;
+					width: 40%;
+					@include bp($max:640px) {
+						margin-top: 0.25em;
+						padding-left: 0;
+						width: 100%;
+					}
+				}
+				h5 {
+					font-size: 15px;
+					margin: 0 0 0.5em;
+					span {
+						position: relative;
+						top: -1px;
+						@include bp($max:640px) {
+							color: $color-4;
+						}
+					}
+					@include bp($max:640px) {
+						color: $color-4;
+						text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+					}
+					@include bp($max:550px) {
+						font-size: 14px;
+					}
+				}
+				p {
+					font-size: 14px;
+					margin-top: 0;
+					@include bp($max:640px) {
+						color: $color-4;
+						text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+					}
+					@include bp($max:550px) {
+						font-size: 13px;
+					}
+				}
+				ul {
+					margin: 0;
+					padding: 0 0 0 20px;
+					@include bp($max:640px) {
+						display: flex;
+						flex-wrap: wrap;
+						list-style-type: none;
+						padding: 0;
+					}
+				}
+				li {
+					font-size: 14px;
+					@include bp($max:640px) {
+						color: $color-4;
+						display: inline-block;
+						font-size: 13px;
+						text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+						width: 50%;
+						&:before {
+							color: $color-4;
+							content: "\2022";
+							font-size: 24px;
+							margin-right: 12px;
+							position: relative;
+							top: 4px;
+						}
+					}
+					@include bp($max:550px) {
+						width: 100%;
+					}
+				}
+			}
+			.slide__btn-wrap {
+				display: flex;
+				justify-content: center;
+				margin-top: 1.5em;
+				width: 100%;
+				@include bp($max:640px) {
+					margin-top: 1.5em;
+				}
+			}
+			.btn {
+				background-color: $color-1;
+				border: 2px solid $color-1;
+				box-shadow: 0 0 5px 0px rgba(0,0,0, 0.15);
+				color: #262626;
+				display: inline-block;
+				font-family: $roboto-reg;
+				margin: 0 auto;
+				padding: 0.5em $pad*2;
+				text-decoration: none;
+				transition: background-color 400ms, color 400ms;
+				@include bp($max:640px) {
+					font-size: 14px;
+					padding: 0.25em $pad*1.5;
+				}
+				&:hover {
+					background-color: rgba(0, 0, 0, 0.55);
+					color: $color-4;
+				}
+			}
+		}
+		// Background Images 
+		&:nth-of-type(1) { // Work BG
+			.slide__content { // Main Work Page Styles
+				background-color: rgba(255, 255, 255, 0.8);
+				display: inline-block;
+				margin: 0 auto;
+				max-width: 735px;
+				padding: 4.25em 3.25em;
+				text-align: center;
+				width: 100%;
+				@include bp($max:1200px) {
+					font-size: 1.35vw;
+					width: 80vw;
+				}
+				@include bp($max:850px) {
+					font-size: 2.15vw;
+					padding: 2.25em;
+				}
+				@include bp($max:640px) {
+					background-color: transparent;
+					font-size: 2.4vw;
+					padding: 0;
+					width: 90%;
+				}
+				@include bp($max:500px) {
+					font-size: 3.25vw;
+				}
+				@include bp($max:400px) {
+					font-size: 4.25vw;
+				}
+				h3 {
+					font-size: 1.8em;
+					margin: 0 0 0.5em;
+					position: relative;
+					width: 100%;
+					@include bp($max:640px) {
+						color: $color-4;
+						text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+					}
+				}
+				p {
+					font-size: 0.95em;
+					margin: 0 auto;
+					max-width: 550px;
+					@include bp($max:640px) {
+						color: $color-4;
+						text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+					}
+					span {
+						color: $color-4;
+						display: none;
+						@include bp($max:640px) {
+							display: inline;
+						}
+					}
+				}
+				.slide__logo-wrap {
+					margin: 0.95em 0 0 0;
+					padding: 0;
+					text-align: center;
+					li {
+						display: inline-block;
+						margin: 0;
+						padding: 0;
+						width: 19%;
+						@include bp($max:850px) {
+							padding: 0 $pad;
+							width: 25%;
+						}
+						@include bp($max:640px) {
+							background-color: rgba(255, 255, 255, 0.8);
+							margin: 0.75em 0.5em;
+							width: 22.5%;
+						}
+						@include bp($max:500px) {
+							margin: 10px 4.5%;
+							width: 40%;
+						}
+					}
+					img {
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+		// Inner Elements
+		.fp-tableCell {
+			align-items: center;
+			display: flex;
+			position: relative;
+			z-index: 20;
+		}
+	}
+}
+/*------------------------------------*\
+	::  Mobile Landscape
+\*------------------------------------*/
+.touch {
+	@media only screen 
+		and (max-device-width: 1023px)
+		and (orientation : landscape) {
+		// Slider Arrows
+		.fp-controlArrow.fp-prev {
+			bottom: $pad*1.5;
+			height: 40px;
+			left: $pad;
+			top: auto;
+			width: 17px;
+		}
+		.fp-controlArrow.fp-next {
+			bottom: $pad*1.5;
+			height: 40px;
+			right: $pad;
+			top: auto;
+			width: 17px;
+		}
+		.slide {
+			.slide__content {
+				background: transparent;
+
+				.slide__image {
+					margin: 0 auto;
+					max-width: 300px;
+					padding: 0;
+				}
+				.slide__col-wrap {
+					padding-top: 0.75em;
+					width: 100%;
+				}
+				.slide__column {
+					h5, p {
+						color: $color-4;
+						max-width: 600px;
+						text-align: center;
+						text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+					}
+					h5 {
+						font-size: 16px;
+						span {
+							color: $color-4;
+						}
+					}
+					p {
+						font-size: 13px;
+						margin: 0 auto;
+					}
+					&:first-of-type {
+						padding: 0;
+						width: 100%;
+					}
+					&:last-of-type {
+						display: none;
+					}
+				}
+				.slide__btn-wrap {
+					margin-top: 1em;
+				}
+				.btn {
+					font-size: 14px;
+					padding: 0.25em $pad*1.5;
+				}
+			}
+			&:nth-of-type(1) { // Work BG
+				.slide__content { // Main Work Page Styles
+					background-color: transparent;
+					font-size: 2vw;
+					padding: 0;
+					width: 90%;
+					.slide__logo-wrap {
+						margin: 0.95em auto 0;
+						width: 80%;
+						li {
+							background-color: rgba(255, 255, 255, 0.8);
+							margin: 0.75em 0.5em;
+							width: 22%;
+							&:nth-of-type(4),
+							&:nth-of-type(5) {
+								margin-bottom: 0;
+							}
+						}
+					}
+					h3, p {
+						color: $color-4;
+						text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+					}
+				}
+			}
+		}
+	}
+	@media only screen 
+		and (max-device-width: 640px)
+		and (orientation : portrait) {
+		.slide {
+			.slide__content {
+				.slide__column {
+					text-align: center;
+					h5 {
+						font-size: 18px;
+						margin-bottom: 0.75em;
+					}
+					&:last-of-type {
+						display: none;
+					}
+				}
+				.slide__btn-wrap {
+					margin-top: 0.25em;
+				}
+			}
+		}
+	}
+}

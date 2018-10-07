@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    :: About Page
+\*------------------------------------*/
+.section--about {
+	.section__content-wrap {
+		background-color: rgba(255, 255, 255, 0.8);
+		display: inline-block;
+		max-width: 735px;
+		padding: 4.25em 3.25em;
+		width: 100%;
+		@include bp($max:1200px) {
+			font-size: 1.35vw;
+			width: 80vw;
+		}
+		@include bp($max:850px) {
+			font-size: 2.15vw;
+			padding: 2.25em;
+		}
+		@include bp($max:640px) {
+			background-color: transparent;
+			font-size: 2.4vw;
+			padding: 0;
+			width: 90%;
+		}
+		@include bp($max:500px) {
+			font-size: 3.25vw;
+		}
+		@include bp($max:400px) {
+			font-size: 4.25vw;
+		}
+		h3 {
+			font-size: 1.8em;
+			margin: 0 0 0.5em;
+			@include bp($max:640px) {
+				color: $color-4;
+				text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+			}
+		}
+		p {
+			font-size: 0.95em;
+			padding: 0 2em;
+			@include bp($max:1050px) {
+				font-size: 1.1em;
+			}
+			@include bp($max:850px) {
+				font-size: 0.95em;
+			}
+			@include bp($max:640px) {
+				color: $color-4;
+				text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+			}
+			@include bp($max:500px) {
+				padding: 0;
+			}
+		}
+		.section__logo-wrap {
+			margin: 0.65em 0 0 0;
+			padding: 0;
+			text-align: center;
+			li {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				width: 19%;
+				img {
+					display: inline-block;
+					vertical-align: middle;
+				}
+				@include bp($max:850px) {
+					padding: 0 $pad;
+					width: 25%;
+				}
+				@include bp($max:640px) {
+					background-color: rgba(255, 255, 255, 0.8);
+					margin: 0.75em 0.5em;
+					width: 22.5%;
+				}
+				@include bp($max:500px) {
+					margin: 10px 4.5%;
+					width: 40%;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Mobile Landscape
+\*------------------------------------*/
+.touch {
+	@media only screen 
+		and (max-device-width: 1023px)
+		and (orientation : landscape) {
+		.section--about {
+			.section__content-wrap {
+				background-color: transparent;
+				font-size: 2vw;
+				padding: 0;
+				width: 90%;
+				h3 {
+					color: $color-4;
+					text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+				}
+				p {
+					color: $color-4;
+					text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+				}
+				.section__logo-wrap {
+					li {
+						background-color: rgba(255, 255, 255, 0.8);
+						margin: 0.75em 0.5em;
+						width: 17%;
+					}
+				}
+			}
+		}
+	}
+}

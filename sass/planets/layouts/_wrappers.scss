@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    ::Wrappers
+\*------------------------------------*/
+[class*="__inner"] {
+    @include grid-row;
+}
+.fp-section {
+	height: 100%!important;
+}
