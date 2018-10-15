@@ -187,17 +187,4 @@
 			}
 		}
 	}
-	@media only screen 
-		and (max-device-width: 850px)
-		and (orientation : landscape) {
-		.section--contact {
-			.section__content-wrap {
-				.section__link-wrap {
-					a {
-						width: 185px;
-					}
-				}
-			}
-		}
-	}	
 }
