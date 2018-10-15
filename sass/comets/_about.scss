@@ -88,7 +88,7 @@
 \*------------------------------------*/
 .touch {
 	@media only screen 
-		and (max-device-width: 1023px)
+		and (max-device-width: 1024px)
 		and (orientation : landscape) {
 		.section--about {
 			.section__content-wrap {
@@ -102,6 +102,7 @@
 				}
 				p {
 					color: $color-4;
+					font-size: 0.95em;
 					text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
 				}
 				.section__logo-wrap {

@@ -150,7 +150,7 @@
 \*------------------------------------*/
 .touch {
 	@media only screen 
-		and (max-device-width: 1023px)
+		and (max-device-width: 1024px)
 		and (orientation : landscape) {
 		.section--contact {
 			.section__content-wrap {
@@ -166,12 +166,13 @@
 				}
 				p, a {
 					color: $color-4;
+					font-size: 0.95em;
 					text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
 				}
 				.section__link-wrap {
 					a {
 						color: $color-4;
-						width: 185px;
+						width: 215px;
 						&:after {
 							background: $color-1;
 						}
@@ -181,6 +182,19 @@
 					margin-top: 1em;
 					svg {
 						fill: $color-4;
+					}
+				}
+			}
+		}
+	}
+	@media only screen 
+		and (max-device-width: 850px)
+		and (orientation : landscape) {
+		.section--contact {
+			.section__content-wrap {
+				.section__link-wrap {
+					a {
+						width: 185px;
 					}
 				}
 			}
